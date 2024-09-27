@@ -1,0 +1,24 @@
+<form>
+    <h3>Create New User Account Form</h3>
+    <label for="firstname">First Name : </label>
+    <input type="text" name="firstname" id="firstname" [(ngModel)]="firstname" placeholder="First Name">
+
+    <label for="lastname">Last Name : </label>
+    <input type="text" name="lastname" id="lastname" [(ngModel)]="lastname" placeholder="Last Name">
+
+    <label for="email">Email Address : </label>
+    <input type="email" name="email" id="email" [(ngModel)]="email" placeholder="Email Address">
+
+    <label for="role">User Role : </label>
+
+    <select name="role" id="role" [(ngModel)]="role">
+
+        <option value="HR_MANAGER">HR Manager</option>
+        <option value="ACCOUNTANT">HR Officer</option>
+        <option value="PRODUCTION_MANAGER">Production Manager</option>
+        <option value="STORE_KEEPER">Store Keeper</option>
+
+    </select>
+
+    <button type="button" (click)="createNewUser()">Create User</button>
+</form>

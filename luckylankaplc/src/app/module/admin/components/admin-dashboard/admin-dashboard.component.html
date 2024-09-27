@@ -1,0 +1,55 @@
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <h4>Admin Dashboard</h4>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <button class="nav-link btn" type="button" style="margin-right: 50px;"><i class="bi bi-bell-fill"></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn" type="button" (click)="logOut()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="sidebar">
+
+    <div class="sidebar-logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkUaMwRRYEO42ky7ij5N5hVTfctmJtj6WvRxaF2kHANi_Du4RUbRyL5Nd1R6A6IxhOrzg&usqp=CAU" alt="Logo" class="logo-img">
+    </div>
+
+
+    <div class="menu-set">
+        <button type="button" routerLink="/admin/dashboard-admin" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <i class="bi bi-house"></i> &nbsp;Dashboard
+        </button>
+        <button type="button" routerLink="/admin/dashboard-admin/create-new-user" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <i class="bi bi-person-plus"></i> &nbsp;Create New User
+        </button>
+        <button type="button" routerLink="/admin/dashboard-admin/view-user" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <i class="bi bi-people"></i> &nbsp;View Users
+        </button>
+        <button type="button" routerLink="/admin/dashboard-admin/user-chat" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <i class="bi bi-chat-dots"></i> &nbsp;Chat
+        </button>
+        <button type="button" routerLink="/admin/dashboard-admin/system-setting" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <i class="bi bi-gear"></i> &nbsp;System Settings
+        </button>
+        <button type="button" routerLink="/admin/dashboard-admin/manage-profile" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <i class="bi bi-person-lines-fill"></i> &nbsp;Manage Profile
+        </button>
+    </div>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
+  
+
+

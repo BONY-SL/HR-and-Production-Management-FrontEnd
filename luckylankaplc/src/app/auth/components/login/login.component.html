@@ -1,0 +1,36 @@
+    <body>
+        <div class="container" id="container">
+            <div class="form-container sign-in-container">
+                <form>
+                    <h1 style="padding: 20px 20px;">Sign in</h1>
+
+                    <input type="email" placeholder="Email" [(ngModel)]="email" name="email" id="email">
+
+                    <input type="password" placeholder="Password" [(ngModel)]="password" name="password" id="password">
+
+                    <a href="#">Forgot your password?</a>
+                    
+                    <button type="button" (click)="loginTo()">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-right">
+                        <h1 style="padding: 15px 10px;">Welcome !</h1>
+                        <h3 style="padding: 15px 10px;">HR & Production Management System</h3>
+                        <div class="image-container">
+                        </div>
+                        <p>Lucky Lanka Milk Processing Co. PLC , Bibulewela, Karagoda Uyangoda, Sri Lanka</p>
+                        <p>
+                            Consumer Hotline (+94) 755 117 117 <br/>
+                            Administration Hotline : (+94) 75 8000 815 <br/>
+                            Sales & Marketing Hotline : (+94) 70 7 688 788 <br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+
