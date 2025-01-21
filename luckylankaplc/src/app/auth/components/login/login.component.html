@@ -4,6 +4,12 @@
                 <form>
                     <h1 style="padding: 20px 20px;">Sign in</h1>
 
+                    <div class="alert alert-warning" role="alert" *ngIf="showAlert">
+                        Please Enter Email and Password !
+                      </div>
+                      <div class="alert alert-danger" role="alert" *ngIf="showAlert2">
+                        Invalid Email Or Password ?
+                      </div>
                     <input type="email" placeholder="Email" [(ngModel)]="email" name="email" id="email">
 
                     <input type="password" placeholder="Password" [(ngModel)]="password" name="password" id="password">

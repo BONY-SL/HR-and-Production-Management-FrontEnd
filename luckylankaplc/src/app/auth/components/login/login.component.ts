@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit{
 
   email: string = '';
   password: string = '';
+  showAlert: boolean = false; // Controls the alert visibility
+  showAlert2: boolean = false; // Controls the alert visibility
 
   constructor(private authService:AuthService,private router:Router,private fb:FormBuilder) {}
 
@@ -22,6 +24,16 @@ export class LoginComponent implements OnInit{
   }
 
   loginTo() {
+
+
+    // Show alert if email or password is empty
+    if (this.email.trim() === '' || this.password.trim() === '') {
+      this.showAlert = true;
+      return;
+    }
+
+    // Hide alert if email and password are provided
+    this.showAlert = false;
 
     const loginRequest = {
       email: this.email,
@@ -44,14 +56,15 @@ export class LoginComponent implements OnInit{
           if (StorageService.isAdminLoggedIn()) {
             this.router.navigateByUrl("/admin/dashboard-admin");
           } else {
-            alert("Bad Credentials");
+            console.log("Bad Credentials");
           }
         } else {
-          alert("Login Error");
+          console.log("Bad Credentials");
         }
       },
       (error) => {
         console.error(error);
+        this.showAlert2 = true;
       }
     );
   }

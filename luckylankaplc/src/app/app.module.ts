@@ -16,7 +16,11 @@ import { UserChatComponent } from './module/admin/components/user-chat/user-chat
 import { SystemSettingsComponent } from './module/admin/components/system-settings/system-settings.component';
 import { ManageProfileComponent } from './module/admin/components/manage-profile/manage-profile.component';
 import { DashboardOverviewComponent } from './module/admin/components/dashboard-overview/dashboard-overview.component';
-
+import { ConfirmationDialogComponent } from './common/confirmation-dialog/confirmation-dialog.component';
+import { ChatboxComponent } from './common/chatbox/chatbox.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -30,11 +34,16 @@ import { DashboardOverviewComponent } from './module/admin/components/dashboard-
     SystemSettingsComponent,
     ManageProfileComponent,
     DashboardOverviewComponent,
+    ConfirmationDialogComponent,
+    ChatboxComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
   ],
   providers: [
     provideAnimationsAsync(),
