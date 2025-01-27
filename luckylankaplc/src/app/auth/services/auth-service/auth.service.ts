@@ -17,8 +17,9 @@ export class AuthService {
 
 
   register(request : any):Observable<any>{
-
-    return this.http.post(BASE_URL+"/luckylanka/hrandpro/auth/register",request);
+    return this.http.post(BASE_URL+"/luckylanka/hrandpro/admin/register",request,{
+      headers: this.createAuthorizationHeader()
+    });
   }
 
   login(request:any):Observable<any>{

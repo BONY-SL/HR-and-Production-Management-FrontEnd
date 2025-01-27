@@ -1,5 +1,14 @@
 <form>
     <h3>Create New User Account Form</h3>
+
+    <div class="alert alert-warning" role="alert" *ngIf="showAlert" align="center">
+        Please Enter All Details...!
+    </div>
+
+    <div class="alert alert-warning" role="alert" *ngIf="showAlert2" align="center">
+        Please Enter Valid Email Address...!
+    </div>
+
     <label for="firstname">First Name : </label>
     <input type="text" name="firstname" id="firstname" [(ngModel)]="firstname" placeholder="First Name">
 
@@ -19,6 +28,5 @@
         <option value="STORE_KEEPER">Store Keeper</option>
 
     </select>
-
     <button type="button" (click)="createNewUser()">Create User</button>
 </form>
