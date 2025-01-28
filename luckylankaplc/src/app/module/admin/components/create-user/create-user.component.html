@@ -9,6 +9,14 @@
         Please Enter Valid Email Address...!
     </div>
 
+    <div class="alert alert-warning" role="alert" *ngIf="showAlert4" align="center">
+        User with this email already exists....!
+    </div>
+
+    <div class="alert alert-success" role="alert" *ngIf="showAlert3" align="center">
+        User Creation Success
+    </div>
+
     <label for="firstname">First Name : </label>
     <input type="text" name="firstname" id="firstname" [(ngModel)]="firstname" placeholder="First Name">
 

@@ -19,6 +19,8 @@ export class CreateUserComponent {
 
   showAlert : boolean = false;
   showAlert2 : boolean = false;
+  showAlert3 :boolean = false;
+  showAlert4 :boolean = false;
   constructor(private authService: AuthService){
 
   }
@@ -63,7 +65,20 @@ export class CreateUserComponent {
 
         this.authService.register(registerRequest).subscribe(
           (response) => {
-              console.log(response);
+
+              if(response.body.message === "User with this email already exists."){
+                this.showAlert4 = true;
+                setTimeout(() => {
+              this.showAlert4 = false;
+            }, 3500);
+              }else{
+
+                this.showAlert3 = true;
+                setTimeout(() => {
+              this.showAlert3 = false;
+            }, 3500);
+
+              }
             },
           (error) => {
             console.error(error);
