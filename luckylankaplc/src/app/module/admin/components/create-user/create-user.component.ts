@@ -52,9 +52,6 @@ export class CreateUserComponent {
       }, 3500);
       return;
     }
-
-    console.log(this.user);
-
         const registerRequest={
           "firstname": this.user.firstname,
           "lastname": this.user.lastname,
