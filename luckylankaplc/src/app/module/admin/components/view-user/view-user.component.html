@@ -1,1 +1,26 @@
-<p>view-user works!</p>
+<div class="centered-div">
+    <h2 class="title">SYSTEM USERS</h2>
+</div>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Email Address</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>User Role</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.email }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.role }}</td>
+                <td>{{ user.stateType }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
