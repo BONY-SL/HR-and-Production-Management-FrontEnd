@@ -1,4 +1,6 @@
-# HR and Production Management System Front-End
+# HR and Production Management System 
+
+# (Currently On Going project)
 
 ## Project Overview
 
