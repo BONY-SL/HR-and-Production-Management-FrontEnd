@@ -19,4 +19,28 @@
 ### 8. Control the production routine process
 
 
+### Back-end Technologies (The back-end is managed in a separate repo, which is not public to protect system data and functionality.)
+  <ul>
+    <li>Java</li>
+    <li>Spring Boot</li>
+    <li>Spring Security</li>
+    <li>JWT Role Base Authontication</li>
+    <li>ORM Hibernate</li>
+    <li>MYSQL Database</li>
+  </ul>
+
+
+### Front-end Technologies
+  <ul>
+    <li>Type Script</li>
+    <li>Angular Framework</li>
+    <li>HTML</li>
+    <li>CSS</li>
+  </ul>
+
+![Screenshot 2025-04-02 174418](https://github.com/user-attachments/assets/dbe75993-0299-4e87-8fb5-35a4e9b565ee)
+
+![Screenshot 2025-04-02 174550](https://github.com/user-attachments/assets/788aac7c-e2b0-4bc8-801e-8d168affd4b4)
+
+![Screenshot 2025-04-02 174611](https://github.com/user-attachments/assets/b5686860-9b9f-45a2-9f83-a9a303e73867)
 
